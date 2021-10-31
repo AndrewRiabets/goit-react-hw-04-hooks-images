@@ -77,7 +77,7 @@ export default function ImageGallery({ inputValue }) {
     return (
       <h1 className="title">
         By searching <span className="rejected-span">{inputValue}</span> we will
-        not find pictures on this resource, sorry :()
+        not find pictures on this resource, sorry :(
       </h1>
     );
   }
