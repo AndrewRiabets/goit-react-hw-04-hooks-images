@@ -50,6 +50,12 @@ export default function ImageGallery({ inputValue }) {
         setPictures([...pictures, ...fetchedPictures]);
       })
       .then(setStatus(Status.RESOLVED))
+      .then(() =>
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: 'smooth',
+        }),
+      )
       .catch(evt => setStatus(Status.REJECTED));
   }, [page]);
 
